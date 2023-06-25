@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">madpractical</string>
+    <string name="btn1">FOLLOW</string>
+    <string name="btn2">MESSAGE</string>
+    <string name="name">MAD</string>
+    <string name="nameTextView">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</string>
+</resources>
