@@ -1,35 +1,19 @@
 package sg.edu.np.mad.madpractical;
 
-public class User {
-    private String name;
-    private String description;
-    private boolean followed;
+import java.io.Serializable;
 
-    public User() {
-        // Default constructor
-    }
+public class user implements Serializable {
+    public String name;
+    public String description;
+    public int id;
+    public boolean followed;
 
-    public String getName() {
-        return name;
-    }
+    public user(){}
 
-    public void setName(String name) {
+    public user(String name, String description, int id, boolean followed){
         this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
         this.description = description;
-    }
-
-    public boolean isFollowed() {
-        return followed;
-    }
-
-    public void setFollowed(boolean followed) {
+        this.id = id;
         this.followed = followed;
     }
 }

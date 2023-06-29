@@ -4,4 +4,6 @@
     <string name="btn2">MESSAGE</string>
     <string name="name">MAD</string>
     <string name="nameTextView">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</string>
+    <string name="title_activity_main">Main Activity</string>
+
 </resources>

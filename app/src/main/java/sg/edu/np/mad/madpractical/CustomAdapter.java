@@ -28,8 +28,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     }
 
     public interface OnItemClickListener {
-        void onImageClick(String name);
-        void onViewClick();
+        void onViewClick(String name);
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
@@ -67,6 +66,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
                 showDialog(user.getName());
             }
         });
+
+        holder.imageView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listener.onViewClick(user.getName()); // Pass the name parameter
+            }
+        });
     }
 
     private void showDialog(String name) {
@@ -76,7 +82,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
                 .setPositiveButton("View", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        listener.onViewClick();
+                        listener.onViewClick(name);
                     }
                 })
                 .setNegativeButton("Cancel", null)
